@@ -12,7 +12,7 @@ if [ "$(command -v apt)" ]; then
   sudo apt install -y fonts-noto-color-emoji > /dev/null 2>&1
 elif [ "$(command -v pacman)" ]; then
   sudo pacman -S --noconfirm noto-fonts-emoji > /dev/null 2>&1
-else; then
+else
   echo " [!] Sorry, i can't figure out your package manager, trying with cURL..."
   curl https://github.com/googlefonts/noto-emoji/blob/master/fonts/NotoColorEmoji.ttf --output NotoColorEmoji.ttf
   mkdir -p ~/.fonts/
@@ -22,7 +22,7 @@ fi
 echo " >>> Add config files to fix missing colored emojis..."
 sudo rm -r emoji-fix > /dev/null 2>&1
 git clone https://github.com/stove-panini/fontconfig-emoji.git emoji-fix > /dev/null 2>&1
-mkdir -p ~/.config/fontsconfig/conf.d
+mkdir -p ~/.config/fontconfig/conf.d
 mv -t ~/.config/fontsconfig/conf.d emoji-fix/69-emoji.conf emoji-fix/70-no-dejavu.conf > /dev/null 2>&1
 sudo rm -r emoji-fix > /dev/null 2>&1
 
