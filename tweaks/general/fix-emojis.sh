@@ -19,12 +19,15 @@ else
   mv ./NotoColorEmoji.ttf ~/.fonts/
 fi
 
-echo " >>> Add config files to fix missing colored emojis..."
+echo " >>> Adding config files to fix missing colored emojis..."
 sudo rm -r emoji-fix > /dev/null 2>&1
 git clone https://github.com/stove-panini/fontconfig-emoji.git emoji-fix > /dev/null 2>&1
 mkdir -p ~/.config/fontconfig/conf.d
 mv -t ~/.config/fontsconfig/conf.d emoji-fix/69-emoji.conf emoji-fix/70-no-dejavu.conf > /dev/null 2>&1
 sudo rm -r emoji-fix > /dev/null 2>&1
+
+echo " >>> Updating font config cache"
+fc-cache -vf > /dev/null 2>&1
 
 echo
 echo "Done! 🎉"
