@@ -27,7 +27,7 @@ mv -t ~/.config/fontsconfig/conf.d emoji-fix/69-emoji.conf emoji-fix/70-no-dejav
 sudo rm -r emoji-fix > /dev/null 2>&1
 
 echo " >>> Updating font config cache"
-fc-cache -vf > /dev/null 2>&1
+fc-cache -f
 
 echo
 echo "Done! 🎉"
