@@ -1,4 +1,4 @@
-# [FIX] Monochrome Emojis
+# [FIX] Monochrome to colored emojis
 ## It fix emojis not showing colored (may not work in Firefox*)
 **\* If so, please open an issue :D**
 
