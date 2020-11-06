@@ -16,4 +16,4 @@
 
 Don't need to be worry the scripts clear all the 'thrash' it make after run :grin:
 
-[shfile]: https://raw.githubusercontent.com/Pliavi/distros-tweaks-and-fixes/master/tweaks/general/fix-emojis.sh
+[shfile]: https://raw.githubusercontent.com/Pliavi/distros-tweaks-and-fixes/master/tweaks/general/fix-emojis/fix-emojis.sh
